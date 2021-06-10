@@ -1,0 +1,1597 @@
+@charset "UTF-8";
+* {
+  font-family: "PT Sans Caption";
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+}
+
+@font-face {
+  font-family: 'Calibri';
+  src: url("./../fonts/Calibri.woff2") format("woff2"), url("./../fonts/alibri.woff") format("woff"), url("./../fonts/Calibri.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aquarelle';
+  src: url("./../fonts/4285.eot");
+  src: local("☺"), url("./../fonts/4285.woff") format("woff"), url("./../fonts/4285.ttf") format("truetype"), url("./../fonts/4285.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans Caption';
+  src: url("./../fonts/PTSans-CaptionBold.eot");
+  src: url("./../fonts/?#iefix") format("embedded-opentype"), url("./../fonts/PTSans-CaptionBold.woff2") format("woff2"), url("./../fonts/PTSans-CaptionBold.woff") format("woff"), url("./../fonts/PTSans-CaptionBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PT Sans Caption';
+  src: url("./../fonts/PTSans-Caption.eot");
+  src: url("./../fonts/PTSans-Caption.eot?#iefix") format("embedded-opentype"), url("./../fonts/PTSans-Caption.woff2") format("woff2"), url("./../fonts/PTSans-Caption.woff") format("woff"), url("./../fonts/PTSans-Caption.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Book Antiqua';
+  src: url("./../fonts/BookAntiqua.woff2") format("woff2"), url("./../fonts/BookAntiqua.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Times New Roman';
+  src: url("./../fonts/TimesNewRomanPSMT.eot");
+  src: url("./../fonts/TimesNewRomanPSMT.eot?#iefix") format("embedded-opentype"), url("./../fonts/TimesNewRomanPSMT.eotTimesNewRomanPSMT.woff2") format("woff2"), url("./../fonts/TimesNewRomanPSMT.eotTimesNewRomanPSMT.woff") format("woff"), url("./../fonts/TimesNewRomanPSMT.eotTimesNewRomanPSMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bahnschrift';
+  src: url("./../fonts/Bahnschrift.eot");
+  src: url("./../fonts/Bahnschrift.eot?#iefix") format("embedded-opentype"), url("./../fonts/Bahnschrift.woff2") format("woff2"), url("./../fonts/Bahnschrift.woff") format("woff"), url("./../fonts/Bahnschrift.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+}
+
+.menu__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 13px;
+  right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+}
+
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: rgba(236, 238, 241, 0.9);
+  -webkit-box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  z-index: 1;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+}
+
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.geometrTop {
+  position: relative;
+  height: 40px;
+  background-color: #1db1ee;
+}
+
+.topBar {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact {
+  font-family: "PT Sans Caption";
+  font-size: 14px;
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact_mail {
+  text-decoration: none;
+  color: #fefffc;
+  padding: 0px 15px;
+}
+
+.contact_border {
+  height: 15px;
+  border-left: 2px solid white;
+}
+
+.contact_tel {
+  text-decoration: none;
+  color: #fefffc;
+  padding: 0px 15px;
+}
+
+.menu {
+  -webkit-clip-path: polygon(2% 0, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(2% 0, 100% 0%, 100% 100%, 0% 100%);
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  top: 5px;
+  color: white;
+  width: 45%;
+  background-color: #92cc4a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu_bar {
+  margin-left: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 400px;
+}
+
+.menu_list {
+  font-family: "PT Sans Caption";
+  font-size: 14px;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style-type: none;
+}
+
+.menu_border {
+  height: 15px;
+  border-left: 2px solid white;
+}
+
+.menu_func {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 20%;
+}
+
+.nav {
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav_title {
+  font-family: 'Aquarelle';
+  font-size: 48px;
+  color: #92cc4a;
+  margin-left: 10px;
+}
+
+.nav_logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 15px;
+}
+
+.nav_list {
+  width: 66%;
+  padding-top: 20px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav_item {
+  font-family: 'PT Sans Caption';
+  font-size: 15px;
+  color: #313230;
+  font-weight: 500;
+}
+
+.vizitka {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 287px;
+  background-image: url("./../images/Фото фон.png");
+}
+
+.vizitka_title {
+  -webkit-clip-path: polygon(21% 0, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(21% 0, 100% 0%, 100% 100%, 0% 100%);
+  font-family: "PT Sans Caption";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fefffc;
+  width: 56%;
+  background-color: rgba(101, 173, 202, 0.6);
+  padding-left: 70px;
+}
+
+.vizitka_line1 {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.vizitka_line2 {
+  font-size: 26px;
+}
+
+.vizitka_line {
+  border-bottom: 1.5px solid white;
+  width: 235px;
+  margin: 20px 0px;
+}
+
+.vizitka_line4 {
+  font-size: 14px;
+}
+
+.vizitka_line5 {
+  font-size: 14px;
+}
+
+.aboutSchool {
+  padding-top: 20px;
+  padding-bottom: 35px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f6f6f6;
+}
+
+.director {
+  width: 560px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.director_title {
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 169px;
+}
+
+.director_welcome {
+  width: 65%;
+}
+
+.letter {
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.letter_direct {
+  border: 0px;
+  width: 38px;
+  height: 38px;
+}
+
+.letter_legend {
+  width: 67%;
+  font-size: 16px;
+  color: #4b4e48;
+  font-weight: 400;
+  text-align: center;
+}
+
+.welcome_title {
+  color: #1f1f1f;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+
+.welcome_talk {
+  font-size: 15px;
+  padding-top: 10px;
+  color: #4b4e48;
+}
+
+.welcome_name {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.timing {
+  margin-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 405px;
+  border-bottom: 4px solid #21b2ee;
+  -webkit-box-shadow: 0px 5px 0px 0px rgba(225, 225, 225, 0.75);
+  box-shadow: 0px 5px 0px 0px rgba(225, 225, 225, 0.75);
+}
+
+.timing_lessons {
+  width: 55%;
+}
+
+.lessons {
+  width: 235px;
+}
+
+.lessons_logo {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 52px;
+}
+
+.lessons_logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.lessons_title {
+  position: relative;
+  left: 5px;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+.lessons_title p:first-child {
+  text-align: center;
+  font-family: "Calibri";
+  font-size: 18px;
+}
+
+.lessons_title p:last-child {
+  text-align: center;
+  font-family: "Times New Roman";
+  font-size: 22px;
+  padding-top: 5px;
+  color: #1db1ee;
+}
+
+.lessons_order {
+  list-style-type: none;
+}
+
+.lessons_item {
+  font-family: 'Calibri';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 22px;
+  color: #1f1f1f;
+}
+
+.lessons_item span {
+  font-family: "Calibri";
+  font-size: 22px;
+  color: #1f1f1f;
+}
+
+.date {
+  width: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.date_clock {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 52px;
+}
+
+.leftTime_order {
+  list-style-type: none;
+}
+
+.leftTime_item {
+  padding: 0px 5px;
+  font-family: "Calibri";
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 22px;
+  background-color: #92cc4a;
+}
+
+.news {
+  position: relative;
+}
+
+.geometrNews {
+  top: 15px;
+  z-index: 1;
+  position: absolute;
+  width: 60%;
+  height: 110px;
+  background-color: #42baeb;
+}
+
+.geometrNews_green {
+  top: 15px;
+  right: 0px;
+  z-index: 1;
+  position: absolute;
+  width: 60%;
+  height: 110px;
+  background-color: #a0cf66;
+}
+
+.headerSect {
+  height: 140px;
+  background-color: #e7e7e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.headerSect_title {
+  background-color: #1db1ee;
+  -webkit-clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+  width: 500px;
+  height: 110px;
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headerSect_title h3 {
+  font-size: 26px;
+  color: #fbfbfb;
+  font-weight: 400;
+}
+
+.headerSect_title p {
+  font-size: 12px;
+  color: #fcfafa;
+  font-weight: 400;
+}
+
+.headerSect_titleGreen {
+  background-color: #91cb49;
+  -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+  width: 500px;
+  height: 110px;
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.headerSect_titleGreen h3 {
+  font-size: 26px;
+  color: #fbfbfb;
+  font-weight: 400;
+}
+
+.headerSect_titleGreen p {
+  font-size: 12px;
+  color: #fcfafa;
+  font-weight: 400;
+}
+
+.news_slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cardNews {
+  margin-top: 40px;
+  position: relative;
+  padding-top: 27px;
+  padding-left: 25px;
+  padding-right: 12px;
+  background-color: #f6f6f6;
+  width: 330px;
+  border-top: solid 3px #8cbf4b;
+  border-bottom: solid 3px #8cbf4b;
+}
+
+.cardNews_title {
+  font-size: 18px;
+  color: #243548;
+  font-weight: bold;
+  font-family: 'Book Antiqua';
+}
+
+.cardNews_date {
+  padding: 17px 0px;
+  font-size: 14px;
+  color: #878484;
+}
+
+.cardNews_discript {
+  font-family: 'Book Antiqua';
+  line-height: 1.8em;
+  font-size: 12px;
+  color: #414141;
+  font-weight: bold;
+}
+
+.cardNews_views {
+  font-size: 14px;
+  color: #878484;
+  margin-top: 53px;
+}
+
+.cardNews_more {
+  position: relative;
+  margin: 0 auto;
+  top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 32px;
+  width: 130px;
+  background-color: #86bc42;
+}
+
+.cardNews_more p {
+  font-size: 14px;
+  color: #fdfefb;
+  font-weight: 400;
+}
+
+.attention {
+  position: relative;
+}
+
+.news_menu {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+.menuSect {
+  padding-top: 40px;
+  margin-bottom: 23px;
+  font-size: 16px;
+  color: #4b4e48;
+  font-weight: 400;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+}
+
+.menuSect_border {
+  height: 100%;
+  width: 2px;
+  border-right: solid 2px #4b4e48;
+}
+
+.attention_slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cardAttention {
+  max-width: 348px;
+  margin-top: 40px;
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cardAttention_ava {
+  width: 143px;
+  height: 143px;
+}
+
+.cardAttention_photo {
+  width: 143px;
+  height: 143px;
+}
+
+.cardAttention_content {
+  width: 205px;
+  padding-top: 14px;
+  padding-left: 18px;
+  padding-right: 12px;
+  padding-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: solid 2px #8cbf4b;
+}
+
+.cardAttention_title {
+  font-family: 'Book Antiqua';
+  font-size: 15px;
+  color: #243548;
+  font-weight: bold;
+}
+
+.cardAttention_discript {
+  font-family: 'Book Antiqua';
+  font-size: 11px;
+  color: #414141;
+  font-weight: bold;
+}
+
+.cardAttention_more {
+  margin-top: 5px;
+  position: relative;
+  left: -8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 28px;
+  width: 85px;
+  background-color: #86bc42;
+}
+
+.cardAttention_more p {
+  font-size: 12px;
+  color: #fdfefb;
+  font-weight: 400;
+}
+
+.attention_menu {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+.teachers {
+  position: relative;
+}
+
+.teachers .menuSect {
+  padding-top: 20px;
+}
+
+.teachers_slider {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cardTeachers {
+  margin-top: 40px;
+  height: 400px;
+  width: 235px;
+}
+
+.cardTeachers_photo {
+  width: 100%;
+}
+
+.cardTeachers_photo img {
+  width: 100%;
+  height: 255px;
+}
+
+.cardTeachers_content {
+  padding: 15px 0px;
+  height: 145px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardTeachers_content .subject {
+  font-family: 'Book Antiqua';
+  font-size: 15px;
+  color: #243548;
+  text-transform: lowercase;
+}
+
+.cardTeachers_discript {
+  font-family: 'Book Antiqua';
+  text-align: center;
+  font-size: 12px;
+  color: #414141;
+}
+
+.teachers_menu {
+  width: 68%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+.students {
+  position: relative;
+}
+
+.students_slider {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cardStudents {
+  height: 375px;
+  width: 235px;
+}
+
+.cardStudents_photo {
+  width: 100%;
+}
+
+.cardStudents_photo img {
+  width: 100%;
+  height: 255px;
+}
+
+.cardStudents_content {
+  padding: 15px 0px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardStudents_content .subject {
+  font-size: 15px;
+  color: #243548;
+  text-transform: uppercase;
+}
+
+.cardStudents_discript {
+  text-align: center;
+  font-size: 13px;
+  color: #414141;
+}
+
+.students_menu .menuSect {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.students_menu .menuSect li {
+  margin-left: 30px;
+}
+
+.geometrBottom {
+  height: 300px;
+  background-color: #1db1ee;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 76%;
+}
+
+.links .section {
+  margin-top: 12px;
+  width: 65%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.links .pages {
+  margin-top: 12px;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.links a {
+  font-family: 'Times New Roman';
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+.links .adress {
+  font-family: 'Times New Roman';
+  font-size: 20px;
+  color: white;
+}
+
+.border {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 22px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.border_card {
+  background-color: #93c1d7;
+  width: 256px;
+  height: 109px;
+}
+
+.travel {
+  position: relative;
+  width: 23%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.travel .maps {
+  width: 95%;
+  position: relative;
+  height: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  border-bottom-right-radius: 140px;
+  border-bottom-left-radius: 140px;
+}
+
+.travel .maps img {
+  width: 80%;
+}
+
+.travel .label {
+  margin-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.travel .label_text {
+  color: #ffffff;
+}
+
+.travel .label_text p {
+  font-family: 'Bahnschrift';
+  font-size: 20px;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .nav_title {
+    padding-top: 15px;
+    font-size: 38px;
+  }
+  .nav_list {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .nav_list li {
+    font-size: 12px;
+  }
+  .vizitka_title {
+    width: 72%;
+  }
+  .aboutSchool .welcome {
+    padding-right: 10px;
+    width: 70%;
+  }
+  .aboutSchool .welcome_title {
+    font-size: 16px;
+  }
+  .aboutSchool .welcome_talk {
+    font-size: 13px;
+  }
+  .aboutSchool .director {
+    width: 55%;
+  }
+  .aboutSchool .director_title {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .aboutSchool .director_photo {
+    width: 100%;
+  }
+  .aboutSchool .letter_legend {
+    font-size: 14px;
+  }
+  .aboutSchool .welcome_name span {
+    font-size: 13px;
+  }
+  .aboutSchool .timing {
+    width: 45%;
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+  .aboutSchool .timing_lessons {
+    width: 63%;
+  }
+  .aboutSchool .lessons_logo img {
+    width: 40px;
+  }
+  .aboutSchool .lessons_logo .lessons_title p:first-child {
+    font-family: "Calibri";
+    font-size: 18px;
+  }
+  .aboutSchool .lessons_logo .lessons_title p:last-child {
+    font-family: "Times New Roman";
+    font-size: 22px;
+    padding-top: 5px;
+    color: #1db1ee;
+  }
+  .aboutSchool .timing_date {
+    width: 35%;
+  }
+  .aboutSchool .lessons_order li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 19px;
+  }
+  .aboutSchool .lessons_order li span {
+    font-size: 19px;
+  }
+  .aboutSchool .leftTime_order li {
+    font-size: 19px;
+  }
+  .news_menu {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .students_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .students_menu .menuSect {
+    width: 70%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .students_menu .menuSect li {
+    margin-left: 0px;
+  }
+  .teachers_menu {
+    width: 80%;
+  }
+  .attention_menu {
+    width: 80%;
+  }
+  .menuSect {
+    padding-top: 40px;
+    margin-bottom: 23px;
+    font-size: 16px;
+    color: #4b4e48;
+    font-weight: 400;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    list-style-type: none;
+  }
+  .menuSect_border {
+    height: 100%;
+    width: 2px;
+    border-right: solid 2px #4b4e48;
+  }
+  .links {
+    width: 70%;
+  }
+  .links .section {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .links .section li {
+    padding: 5px 5px;
+  }
+  .links .section li a {
+    font-size: 17px;
+  }
+  .links .pages {
+    margin-top: 32px;
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .links .pages li {
+    padding: 5px 5px;
+  }
+  .links .pages li a {
+    font-size: 17px;
+  }
+  .geometrBottom {
+    height: 330px;
+    background-color: #1db1ee;
+  }
+  .travel {
+    width: 30%;
+  }
+  .travel .label_text .label_textT {
+    font-size: 17px;
+    text-align: center;
+  }
+  .label_geo {
+    padding-left: 5px;
+  }
+}
+
+@media (max-width: 842px) {
+  .nav {
+    padding-bottom: 10px;
+  }
+  .nav_title {
+    font-size: 30px;
+    margin-left: 10px;
+  }
+  .nav_sova {
+    margin-top: 9px;
+    width: 60px;
+  }
+  .nav_list {
+    padding-top: 10px;
+    padding-right: 8px;
+    padding-left: 0px;
+  }
+  .nav_list li {
+    font-size: 12px;
+  }
+  .aboutSchool .director {
+    width: 62%;
+  }
+  .aboutSchool .timing {
+    width: 38%;
+    margin-right: 5px;
+    margin-left: 0px;
+  }
+  .aboutSchool .lessons_logo .lessons_title p:first-child {
+    font-size: 14px;
+  }
+  .aboutSchool .lessons_logo .lessons_title p:last-child {
+    font-size: 18px;
+  }
+  .aboutSchool .lessons_order li {
+    font-size: 17px;
+  }
+  .aboutSchool .lessons_order li span {
+    font-size: 17px;
+  }
+  .aboutSchool .leftTime_order li {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav_title {
+    padding-top: 4px;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+  .nav_logo {
+    margin-left: 5px;
+  }
+  .nav_sova {
+    margin-top: 9px;
+    width: 45px;
+  }
+  .nav_list {
+    width: 70%;
+    padding-top: 10px;
+    padding-right: 8px;
+    padding-left: 0px;
+  }
+  .nav_list li {
+    font-size: 10px;
+  }
+  .topBar_contact {
+    padding-left: 5px;
+  }
+  .topBar_contact a {
+    font-size: 11px;
+  }
+  .contact_tel {
+    padding: 0px 5px;
+  }
+  .contact_mail {
+    padding: 0px 5px;
+  }
+  .menu_bar {
+    margin-left: 7px;
+  }
+  .menu_list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .menu_list li {
+    font-size: 12px;
+  }
+  .vizitka {
+    height: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .vizitka_title {
+    width: 90%;
+  }
+  .vizitka_line1 {
+    font-size: 14px;
+  }
+  .vizitka_line2 {
+    font-size: 20px;
+  }
+  .vizitka_line1 {
+    font-size: 14px;
+  }
+  .vizitka_line1 {
+    font-size: 14px;
+  }
+  .aboutSchool {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .aboutSchool .director {
+    width: 100%;
+  }
+  .aboutSchool .welcome {
+    padding-right: 20px;
+    width: 70%;
+  }
+  .aboutSchool .timing {
+    border-top: 3px solid #21b2ee;
+    border-bottom: 3px solid #21b2ee;
+    padding: 20px 0px;
+    margin-top: 25px;
+    width: 100%;
+  }
+  .aboutSchool .lessons_logo .lessons_title p:first-child {
+    font-size: 18px;
+  }
+  .aboutSchool .lessons_logo .lessons_title p:last-child {
+    font-size: 22px;
+  }
+  .aboutSchool .lessons_order li {
+    font-size: 22px;
+  }
+  .aboutSchool .lessons_order li span {
+    font-size: 22px;
+  }
+  .aboutSchool .leftTime_order li {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 583px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .nav_logo {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav_list {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact_border {
+    display: none;
+  }
+  .topBar_contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .topBar_menu {
+    -webkit-clip-path: polygon(14% 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(14% 0, 100% 0%, 100% 100%, 0% 100%);
+    width: 25%;
+  }
+  .topBar_menu .menu_bar {
+    display: none;
+  }
+  .nav_list {
+    display: none;
+  }
+  .vizitka_title {
+    -webkit-clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
+    width: 100%;
+    padding-left: 0px;
+  }
+  .travel .label_text .label_textT {
+    font-size: 10px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

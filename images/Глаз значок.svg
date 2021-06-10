@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 16" width="21" height="16">
+	<title>Top</title>
+	<defs>
+		<image width="32" height="32" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAzRJREFUeNrsl0doVGEQx7fFYDsE1FgwINgPomAjolE8SA5iQxQrdiMRUcFoPIiHWKJIEBWsBysKopcYCxYUsSLkYFAwgokGNTbEqOvuZv0P/h8M43tbsoe9ZOAX9s373pt580354o/H475sSsCXZWl3IJTBs37Qib9/gjYlUygSifii0Wiq6weDYjAe9Ad5dOQrqAf3QA2oS8l4KOTzh8PhVByYANbTeG6StRFwDVSBm5k60AvsBIvbuE3nwBbwpi0OTAFHQIHRt4DHoBZ84N7ng2FgNOhq1r8Ha8CldBxYBQ6CoNJ9AgfAKfDa44vF2flgLaOnZTPYnYoD67h/Ws6DTaCB1+LYUNCPEag3iSfGK8AS8x7ZzvJEDiwEJ9UDMbAB7Dcv6kyDBWrdfbAd3FLrVjJqOUq3FexwHNCNaAz33JEfYIaLcScPrqjrICvlBliu9PK+mewTjlTwvf+aCSMgifMEDFLGpycpo0J+tRWJxjjwSOmKmYS5Kp+GIwLvnAiUK+OyH3NdjJeBInX9EDx3cUCisc3oakxkujnbIA4MBKXqpjhTbV7QG+wCdxh6+aJWcNQjOkUuVXAa7FXX88CIADO1C5XSMPZ5lJcOpzhxm8+FXdbLjOjropcEbFRzaLb8+WWGUwejc9qrlYnEawi5dbdcMwDjEoETTAqRPsxSK9J4viSYilY+ezSrKrU14uBFceAtG4QjMnRKzIMy7S6nMQMk478Znbx3qZkTz5wyzGGCFaoFK8AxkwdSqj2SGJf5MErttY+Gj6vrj5KAKMOmgNrjRaBZLZIM36iuG9gbGhMYlzXTzJoSY7yV07XJHsmkn88Bv5VOyuawqpIHYCz1L9kRW/h7D+85DUiiWgkOGSfFoau2E+oFUzl8OipdLYfRdVMxPdXIjZouWcmOqKWUUzbpOJ4MznDOa6lmXtx1qYo8RkD6yiwT3e/MqQvpHEgGMPyTXO5JEr1STuTxjJjvslZa9mpGMe0jWZCHizIV7lSlmbkitf8n00OpGF8GFvBknEhegLPM/Kakh1I5lsdisVS/SlrpSCbZENBdfW0dq+Spx3z4P7zBoM/f/s9pth34K8AA/mUJkpaAn9wAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="Top">
+		<use id="Глаз значок" href="#img1" transform="matrix(0.641,0,0,0.641,0,-2.5)"/>
+	</g>
+</svg>

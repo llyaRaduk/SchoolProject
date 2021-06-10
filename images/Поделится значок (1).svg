@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" width="18" height="18">
+	<title>Top</title>
+	<defs>
+		<image width="18" height="18" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAABiklEQVQ4T53UzYvOYRTG8c+hvDQiRYkmykhKbCz4D4ilYhYWsmEz8laUkoWVlQUbO4W8TFkwFhQrGyuElGYxk6kxE6JBNke3bno8zc/zeM72d/r+rnOu69yhh8rMrdiNBbgTEQ/jfzmZuQ2n8RrH8B37egHdxRvswIYqZLwX0DNsxJyWaWb+AmXmaizDVESMtY6dmctxGCcwr20lo79AmTmAi9iCJfiGBziCSRzCcazEV3zGigr7hMHIzH48xW08xiWUv5cqqmZadnEV5zCN7VXZo4gYLaBrWIqTxUqsmcXJkQKIiCdNLhdQkf4S66v09t4JrI2IYnNjFdCHqqip6T0GIuJLJ9CLamdT3zg2R8THTqAhXOiQ8DL6mYgY/teO5uIy9s/SdAN92FW/3cMpLMTBkhwMR8TIn0Bm5h7srdZP4WZEXK85G8RZrMMPvMN9HMD8krOuTyQzF+NoVXQem7Cznsp016DfY2fmK5QQL2q8tW6elMy8Up6Ntt7nvShahVso71Kpt+XWfgIOjoKQ6Pox4AAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<g id="Top">
+		<use id="Поделится значок" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+	</g>
+</svg>
