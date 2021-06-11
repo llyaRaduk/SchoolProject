@@ -728,13 +728,14 @@
 }
 
 .cardNews {
+  margin-left: 40px;
   margin-top: 40px;
   position: relative;
   padding-top: 27px;
   padding-left: 25px;
   padding-right: 12px;
   background-color: #f6f6f6;
-  width: 330px;
+  width: 33%;
   border-top: solid 3px #8cbf4b;
   border-bottom: solid 3px #8cbf4b;
 }
@@ -1609,6 +1610,9 @@
   }
   .travel .label_text .label_textT {
     font-size: 10px;
+  }
+  .cardNews {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=main.css.map */
