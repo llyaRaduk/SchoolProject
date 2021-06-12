@@ -166,6 +166,16 @@
   background-color: #CFD8DC;
 }
 
+.news .slick-prev:before {
+  color: green;
+  padding-left: 2px;
+}
+
+.news .slick-next:before {
+  padding-right: 2px;
+  color: green;
+}
+
 .container {
   max-width: 1080px;
   margin: 0 auto;
@@ -718,24 +728,19 @@
 }
 
 .news_slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .cardNews {
-  margin-left: 40px;
+  margin-left: 15px;
+  margin-bottom: 20px;
   margin-top: 40px;
   position: relative;
   padding-top: 27px;
   padding-left: 25px;
   padding-right: 12px;
   background-color: #f6f6f6;
-  width: 33%;
   border-top: solid 3px #8cbf4b;
   border-bottom: solid 3px #8cbf4b;
 }

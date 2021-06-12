@@ -80,104 +80,117 @@
     font-display: swap;
 }
 
+
 #menu__toggle {
     display: none;
     opacity: 0;
-  }
-  
-  #menu__toggle:checked ~ .menu__btn > span {
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
-  }
-  #menu__toggle:checked ~ .menu__btn > span::before {
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
     top: 0;
     transform: rotate(0);
-  }
-  #menu__toggle:checked ~ .menu__btn > span::after {
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
     top: 0;
     transform: rotate(90deg);
-  }
-  #menu__toggle:checked ~ .menu__box {
+}
+#menu__toggle:checked ~ .menu__box {
     visibility: visible;
     right: 0;
-  }
-  
-  .menu__btn {
+}
+
+.menu__btn {
     display: none;
     align-items: center;
     position: fixed;
     top: 13px;
     right: 20px;
-  
+
     width: 26px;
     height: 26px;
-  
+
     cursor: pointer;
     z-index: 10;
-  }
-  
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
     display: block;
     position: absolute;
-  
+
     width: 100%;
     height: 2px;
-  
+
     background-color: #616161;
-  
+
     transition-duration: .25s;
-  }
-  .menu__btn > span::before {
+}
+.menu__btn > span::before {
     content: '';
     top: -8px;
-  }
-  .menu__btn > span::after {
+}
+.menu__btn > span::after {
     content: '';
     top: 8px;
-  }
-  
-  .menu__box {
+}
+
+.menu__box {
     display: block;
     position: fixed;
     visibility: hidden;
     top: 0;
     right: 0;
-  
+
     width: 300px;
     height: 100%;
-  
+
     margin: 0;
     padding: 80px 0;
-  
+
     list-style: none;
 
     background-color: rgba(236,238, 241, 0.9);
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-  
+
     transition-duration: .25s;
 
     z-index: 9;
-    
-  }
-  
-  .menu__item {
+}
+
+.menu__item {
     display: block;
     padding: 12px 24px;
-  
+
     color: #333;
-  
+
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 600;
-  
+
     text-decoration: none;
-  
+
     transition-duration: .25s;
-  }
-  .menu__item:hover {
+    }
+    .menu__item:hover {
     background-color: #CFD8DC;
-  }
+}
+
+//slider
+.news{
+    .slick-prev:before {
+        color: green;
+        padding-left: 2px;
+    }
+    .slick-next:before{
+        padding-right: 2px;
+        color: green;
+    }
+}
+
 
 
 
@@ -570,20 +583,20 @@
 }
 
 .news_slider{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+
 }
 
 .cardNews{
-    margin-left: 40px;
+    margin-left: 15px;
+    margin-bottom: 20px;
     margin-top: 40px;
     position: relative;
     padding-top: 27px;
     padding-left: 25px;
     padding-right: 12px;
     background-color: #f6f6f6;
-    width: 33%;
     border-top: solid 3px #8cbf4b;
     border-bottom: solid 3px #8cbf4b;
     &_title{
