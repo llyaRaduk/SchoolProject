@@ -166,14 +166,30 @@
   background-color: #CFD8DC;
 }
 
-.news .slick-prev:before {
+.container .slick-prev:before {
   color: green;
   padding-left: 2px;
 }
 
-.news .slick-next:before {
+.container .slick-next:before {
   padding-right: 2px;
   color: green;
+}
+
+.container .slick-next {
+  right: -20px;
+}
+
+.container .slick-prev {
+  left: -20px;
+}
+
+.teachers .slick-arrow {
+  top: 180px;
+}
+
+.students .slick-arrow {
+  top: 180px;
 }
 
 .container {
@@ -806,6 +822,9 @@
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .menuSect {
@@ -933,19 +952,15 @@
 }
 
 .teachers_slider {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .cardTeachers {
+  margin-left: 10px;
   margin-top: 40px;
   height: 400px;
-  width: 235px;
+  width: 232px;
 }
 
 .cardTeachers_photo {
@@ -953,7 +968,7 @@
 }
 
 .cardTeachers_photo img {
-  width: 100%;
+  width: 99%;
   height: 255px;
 }
 
@@ -1002,18 +1017,15 @@
 
 .students_slider {
   margin-top: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .cardStudents {
+  margin-top: 40px;
+  margin-left: 15px;
   height: 375px;
-  width: 235px;
+  width: 232px;
 }
 
 .cardStudents_photo {
@@ -1021,7 +1033,7 @@
 }
 
 .cardStudents_photo img {
-  width: 100%;
+  width: 99%;
   height: 255px;
 }
 
@@ -1379,6 +1391,9 @@
 }
 
 @media (max-width: 842px) {
+  .news .menuSect {
+    padding-top: 20px;
+  }
   .nav {
     padding-bottom: 10px;
   }
@@ -1424,6 +1439,22 @@
 }
 
 @media (max-width: 720px) {
+  .teachers_menu {
+    width: 95%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menuSect {
+    width: 95%;
+  }
+  .menuSect li {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 5px;
+  }
   .nav_title {
     padding-top: 4px;
     font-size: 24px;
@@ -1560,7 +1591,35 @@
   }
 }
 
+@media (max-width: 612px) {
+  .teachers_menu .menuSect li:nth-child(3) {
+    width: 33%;
+  }
+  .students_menu .menuSect {
+    width: 95%;
+  }
+}
+
 @media (max-width: 500px) {
+  .attention_menu .menuSect {
+    padding-top: 25px;
+  }
+  .teachers_menu {
+    width: 95%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menuSect {
+    width: 95%;
+  }
+  .menuSect li {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 12px;
+    text-align: center;
+    padding: 0 5px;
+  }
   .topBar_contact {
     padding-left: 5px;
   }
@@ -1618,6 +1677,21 @@
   }
   .cardNews {
     width: 90%;
+  }
+}
+
+@media (max-width: 342px) {
+  .teachers_menu .menuSect li {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 318px) {
+  .menuSect li {
+    font-size: 10px;
+  }
+  .menuSect li:nth-child(2n) {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */

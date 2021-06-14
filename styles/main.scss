@@ -180,7 +180,8 @@
 }
 
 //slider
-.news{
+.container{
+   
     .slick-prev:before {
         color: green;
         padding-left: 2px;
@@ -189,7 +190,28 @@
         padding-right: 2px;
         color: green;
     }
+    .slick-next{
+
+        right: -20px;
+    }
+    .slick-prev {
+        left: -20px;
+    }
+
 }
+
+
+.teachers{
+    .slick-arrow{
+        top: 180px;
+    }
+}
+.students{
+    .slick-arrow{
+        top: 180px;
+    }
+}
+
 
 
 
@@ -649,6 +671,7 @@
     width: 80%;
     display: flex;
     margin: 0 auto;
+    justify-content: center;
 }
 
 .menuSect{
@@ -740,18 +763,18 @@
 }
 
 .teachers_slider{
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-around;
+    max-width: 90%;
+    margin: 0 auto;
 }
 .cardTeachers{
+    margin-left: 10px;
     margin-top: 40px;
     height: 400px;
-    width: 235px;
+    width: 232px;
     &_photo{
         width: 100%;
         & img{
-            width: 100%;
+            width: 99%;
             height: 255px;
         }
     }
@@ -789,18 +812,18 @@
 
 .students_slider{
     margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
 }
 .cardStudents{
-    
+    margin-top: 40px;
+    margin-left: 15px;
     height: 375px;
-    width: 235px;
+    width: 232px;
     &_photo{
         width: 100%;
         & img{
-            width: 100%;
+            width: 99%;
             height: 255px;
         }
     }
@@ -1025,6 +1048,7 @@
    .news_menu{
     width: 100%;
     display: flex;
+    
     }
 
     .students_menu{
@@ -1111,7 +1135,12 @@
 }
 
 @media (max-width: 842px){
-    
+    .news{
+        .menuSect{
+            padding-top: 20px;
+        }
+    }
+   
     .nav{
         padding-bottom: 10px;
         &_title{
@@ -1171,6 +1200,22 @@
 }
 
 @media (max-width: 720px){
+    .teachers_menu{
+        width: 95%;
+        justify-content: center;
+       
+    }
+    
+    .menuSect{
+            
+            width: 95%;
+        li {
+            justify-content: space-around;
+            font-size: 14px;
+            text-align: center;
+            padding: 0 5px; 
+        }
+    }
     
     .nav{
       
@@ -1287,7 +1332,11 @@
 }
 
 @media (max-width: 583px){
-
+    .teachers {
+        .slick-list{
+          
+        }
+    }
     .nav{
         display: flex;
         justify-content: space-between;
@@ -1305,8 +1354,47 @@
     }
 
 }
+@media (max-width: 612px){
+    .teachers_menu{
+        .menuSect{
+            li:nth-child(3){
+                width: 33%;
+            }
+        }
+    }
+    .students_menu{
+        .menuSect{
+            width: 95%;
+        }
+    }
+}
 
 @media (max-width: 500px){
+    .attention_menu{
+        .menuSect{
+            padding-top: 25px;
+        }
+    }
+    .teachers_menu{
+        width: 95%;
+        justify-content: center;
+        li {
+          
+        }
+    }
+    
+    .menuSect{
+            width: 95%;
+        li {
+            justify-content: space-around;
+            font-size: 12px;
+            text-align: center;
+            padding: 0 5px; 
+        }
+         
+       
+    }
+
     .topBar_contact{
         padding-left: 5px;
         & a{
@@ -1366,6 +1454,30 @@
     }
    
 }
+
+@media (max-width: 342px){
+    .teachers_menu{
+        .menuSect{
+            li{
+                font-size: 10px;
+            }
+           
+        }
+    }
+ 
+}
+
+@media (max-width: 318px){
+    .menuSect{
+       li{
+           font-size: 10px;
+       }
+       li:nth-child(2n){
+        display: none;
+    }
+    }
+}
+
 
 
 
