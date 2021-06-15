@@ -1724,6 +1724,15 @@
 }
 
 @media (max-width: 355px) {
+  .label_textT {
+    display: none;
+  }
+  .container .slick-next {
+    margin-right: 14px;
+  }
+  .container .slick-prev {
+    margin-left: 14px;
+  }
   .cardAttention {
     width: 100%;
   }
@@ -1779,6 +1788,14 @@
 }
 
 @media (max-width: 295px) {
+  .cardAttention_ava {
+    width: 100%;
+    height: 143px;
+  }
+  .cardAttention_photo {
+    width: 100%;
+    height: 143px;
+  }
   .aboutSchool .lessons_logo .lessons_title p:first-child {
     font-size: 10px;
   }
