@@ -168,20 +168,30 @@
 
 .container .slick-prev:before {
   color: green;
-  padding-left: 2px;
 }
 
 .container .slick-next:before {
-  padding-right: 2px;
   color: green;
 }
 
 .container .slick-next {
-  right: -20px;
+  margin-right: 3px;
 }
 
 .container .slick-prev {
-  left: -20px;
+  margin-left: 3px;
+}
+
+.news_slider .slick-list {
+  margin-right: 15px;
+}
+
+.teachers_slider .slick-list {
+  margin-right: 10px;
+}
+
+.students_slider .slick-list {
+  margin-right: 15px;
 }
 
 .teachers .slick-arrow {
@@ -1601,6 +1611,12 @@
 }
 
 @media (max-width: 500px) {
+  .container .slick-next {
+    margin-right: 8px;
+  }
+  .container .slick-prev {
+    margin-left: 8px;
+  }
   .attention_menu .menuSect {
     padding-top: 25px;
   }
