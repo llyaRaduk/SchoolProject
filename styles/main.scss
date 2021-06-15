@@ -1512,6 +1512,26 @@
     }
    
 }
+@media (max-width: 355px){
+    .cardAttention{
+        width: 100%;
+    }
+    .aboutSchool .lessons_logo .lessons_title p:first-child {
+        font-size: 14px;
+    }
+    .aboutSchool .lessons_logo .lessons_title p:last-child {
+        font-size: 18px;
+    }
+    .aboutSchool .lessons_order li {
+        font-size: 18px;
+    }
+    .aboutSchool .lessons_order li span {
+        font-size: 18px;
+    }
+    .aboutSchool .leftTime_order li {
+        font-size: 18px;
+    }
+}
 
 @media (max-width: 342px){
     
@@ -1553,6 +1573,24 @@
        li:nth-child(2n){
         display: none;
     }
+    }
+}
+
+@media (max-width: 295px){
+    .aboutSchool .lessons_logo .lessons_title p:first-child {
+        font-size: 10px;
+    }
+    .aboutSchool .lessons_logo .lessons_title p:last-child {
+        font-size: 14px;
+    }
+    .aboutSchool .lessons_order li {
+        font-size: 14px;
+    }
+    .aboutSchool .lessons_order li span {
+        font-size: 14px;
+    }
+    .aboutSchool .leftTime_order li {
+        font-size: 14px;
     }
 }
 
