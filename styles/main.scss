@@ -1386,9 +1386,37 @@
     }
 }
 
-@media (max-width: 500px){
+@media (max-width: 499px){
+    .director{
+        display: block;
+        .director_welcome{
+            width: 98%;
+        }
+        .welcome_talk{
+            padding-left: 15px;
+        }
+    }
+    .director_title{
+        float: left;
+    }
+   
 
-
+    .vizitka_title{
+       text-align: center;
+    }
+    .headerSect{
+        
+        &_title{
+            background-color: #1db1ee;
+            clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
+            text-align: center;
+        }
+        &_titleGreen{
+            background-color: #91cb49;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            text-align: center;
+        }
+    }
     .container{
    
         .slick-next{
@@ -1486,6 +1514,26 @@
 }
 
 @media (max-width: 342px){
+    
+    .director{
+        display: block;
+        .director_welcome{
+            width: 98%;
+            padding-right: 12px;
+        }
+        .welcome_talk{
+            padding-left: 15px;
+            text-align: center;
+        }
+        .welcome_title{
+            padding-top: 10px;
+        }
+    }
+    .director_title{
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
     .teachers_menu{
         .menuSect{
             li{

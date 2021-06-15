@@ -1610,7 +1610,34 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 499px) {
+  .director {
+    display: block;
+  }
+  .director .director_welcome {
+    width: 98%;
+  }
+  .director .welcome_talk {
+    padding-left: 15px;
+  }
+  .director_title {
+    float: left;
+  }
+  .vizitka_title {
+    text-align: center;
+  }
+  .headerSect_title {
+    background-color: #1db1ee;
+    -webkit-clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
+    text-align: center;
+  }
+  .headerSect_titleGreen {
+    background-color: #91cb49;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    text-align: center;
+  }
   .container .slick-next {
     margin-right: 8px;
   }
@@ -1697,6 +1724,25 @@
 }
 
 @media (max-width: 342px) {
+  .director {
+    display: block;
+  }
+  .director .director_welcome {
+    width: 98%;
+    padding-right: 12px;
+  }
+  .director .welcome_talk {
+    padding-left: 15px;
+    text-align: center;
+  }
+  .director .welcome_title {
+    padding-top: 10px;
+  }
+  .director_title {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
   .teachers_menu .menuSect li {
     font-size: 10px;
   }
