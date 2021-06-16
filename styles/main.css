@@ -330,7 +330,7 @@
 .nav_title {
   text-align: center;
   font-family: 'Aquarelle';
-  font-size: 48px;
+  font-size: 52px;
   font-weight: bold;
   color: #92cc4a;
   margin-left: 10px;
@@ -1255,7 +1255,7 @@
 
 @media (max-width: 980px) {
   .nav_title {
-    font-size: 38px;
+    font-size: 42px;
   }
   .nav_list {
     padding-right: 8px;
@@ -1435,7 +1435,7 @@
     padding-bottom: 10px;
   }
   .nav_title {
-    font-size: 30px;
+    font-size: 34px;
     margin-left: 10px;
   }
   .nav_sova {
@@ -1493,8 +1493,8 @@
     padding: 0 5px;
   }
   .nav_title {
-    font-size: 27px;
-    margin-left: 10px;
+    font-size: 25px;
+    margin-left: 5px;
   }
   .nav_logo {
     margin-left: 5px;
@@ -1506,7 +1506,7 @@
   .nav_list {
     width: 70%;
     padding-top: 10px;
-    padding-right: 8px;
+    padding-right: 4px;
     padding-left: 0px;
   }
   .nav_list li a {
@@ -1624,6 +1624,9 @@
     width: 100%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  .nav_title {
+    font-size: 32px;
   }
 }
 
