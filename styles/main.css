@@ -328,6 +328,7 @@
 }
 
 .nav_title {
+  text-align: center;
   font-family: 'Aquarelle';
   font-size: 48px;
   color: #92cc4a;
@@ -338,6 +339,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 15px;
 }
 
@@ -1250,7 +1254,6 @@
 
 @media (max-width: 980px) {
   .nav_title {
-    padding-top: 15px;
     font-size: 38px;
   }
   .nav_list {
@@ -1489,7 +1492,6 @@
     padding: 0 5px;
   }
   .nav_title {
-    padding-top: 4px;
     font-size: 24px;
     margin-left: 10px;
   }
