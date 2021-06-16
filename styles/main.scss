@@ -626,6 +626,14 @@
 }
 
 .cardNews{
+    &:hover { 
+        border-top: solid 3px #1db1ee;
+        border-bottom: solid 3px #1db1ee;
+        .cardNews_more{
+            background-color: #1db1ee;
+        }
+        
+    }
     margin-left: 15px;
     margin-bottom: 20px;
     margin-top: 40px;
@@ -781,6 +789,11 @@
     margin: 0 auto;
 }
 .cardTeachers{
+    &:hover{
+        background-color: #e7e7e7;
+        border-bottom: solid 3px #8cbf4b;
+       
+    }
     margin-left: 10px;
     margin-top: 40px;
     height: 400px;
@@ -830,6 +843,10 @@
     margin: 0 auto;
 }
 .cardStudents{
+    &:hover{
+        background-color: #e7e7e7;
+        border-bottom: solid 3px #8cbf4b;
+    }
     margin-top: 40px;
     margin-left: 15px;
     height: 375px;
