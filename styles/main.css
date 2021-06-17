@@ -299,6 +299,11 @@
   list-style-type: none;
 }
 
+.menu_list a {
+  color: white;
+  text-decoration: none;
+}
+
 .menu_border {
   height: 15px;
   border-left: 2px solid white;
@@ -1540,7 +1545,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .menu_list li {
+  .menu_list li a {
     font-size: 12px;
   }
   .vizitka {

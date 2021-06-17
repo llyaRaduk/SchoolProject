@@ -291,6 +291,10 @@
     }
     
     &_list{
+        a{
+            color: white;
+            text-decoration: none;
+        }
         font-family: "PT Sans Caption";
         font-size: 14px;
         width: 70%;
@@ -1304,8 +1308,10 @@
         
         align-items: center;
         & li{
-
-            font-size: 12px;
+            a{
+                font-size: 12px;
+            }
+            
         }
     }
     .vizitka{
