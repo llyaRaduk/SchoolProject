@@ -701,6 +701,10 @@
 }
 
 .menuSect{
+    a{
+        text-decoration: none;
+        color: #4b4e48;
+    }
     padding-top: 40px;
     margin-bottom: 23px;
     font-size: 16px;
@@ -1250,6 +1254,9 @@
             font-size: 14px;
             text-align: center;
             padding: 0 5px; 
+            a{
+            font-size: 14px;
+            }
         }
     }
     
@@ -1467,6 +1474,9 @@
             font-size: 12px;
             text-align: center;
             padding: 0 5px; 
+            a{
+                font-size: 12px;  
+            }
         }
          
        
@@ -1595,6 +1605,9 @@
         .menuSect{
             li{
                 font-size: 10px;
+                a{
+                    font-size: 10px; 
+                }
             }
            
         }
@@ -1606,6 +1619,9 @@
     .menuSect{
        li{
            font-size: 10px;
+           a{
+            font-size: 10px;  
+           }
        }
        li:nth-child(2n){
         display: none;

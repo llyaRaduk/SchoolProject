@@ -868,6 +868,11 @@
   list-style-type: none;
 }
 
+.menuSect a {
+  text-decoration: none;
+  color: #4b4e48;
+}
+
 .menuSect_border {
   height: 100%;
   width: 2px;
@@ -1492,6 +1497,9 @@
     text-align: center;
     padding: 0 5px;
   }
+  .menuSect li a {
+    font-size: 14px;
+  }
   .nav_title {
     font-size: 25px;
     margin-left: 5px;
@@ -1692,6 +1700,9 @@
     text-align: center;
     padding: 0 5px;
   }
+  .menuSect li a {
+    font-size: 12px;
+  }
   .topBar_contact {
     padding-left: 5px;
   }
@@ -1805,10 +1816,16 @@
   .teachers_menu .menuSect li {
     font-size: 10px;
   }
+  .teachers_menu .menuSect li a {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 318px) {
   .menuSect li {
+    font-size: 10px;
+  }
+  .menuSect li a {
     font-size: 10px;
   }
   .menuSect li:nth-child(2n) {
