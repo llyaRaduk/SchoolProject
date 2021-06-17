@@ -1389,38 +1389,11 @@
     width: 2px;
     border-right: solid 2px #4b4e48;
   }
-  .links {
-    width: 70%;
+  .links .section a {
+    font-size: 16px;
   }
-  .links .section {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .links .section li {
-    padding: 5px 5px;
-  }
-  .links .section li a {
-    font-size: 17px;
-  }
-  .links .pages {
-    margin-top: 32px;
-    width: 100%;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .links .pages li {
-    padding: 5px 5px;
-  }
-  .links .pages li a {
-    font-size: 17px;
+  .links .pages a {
+    font-size: 16px;
   }
   .geometrBottom {
     height: 330px;
@@ -1483,6 +1456,18 @@
   }
   .aboutSchool .leftTime_order li {
     font-size: 17px;
+  }
+  .links .section {
+    width: 80%;
+  }
+  .links .section a {
+    font-size: 16px;
+  }
+  .links .pages {
+    width: 90%;
+  }
+  .links .pages a {
+    font-size: 16px;
   }
 }
 
@@ -1609,6 +1594,18 @@
   .aboutSchool .leftTime_order li {
     font-size: 22px;
   }
+  .links .section {
+    width: 80%;
+  }
+  .links .section a {
+    font-size: 14px;
+  }
+  .links .pages {
+    width: 98%;
+  }
+  .links .pages a {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 583px) {
@@ -1641,6 +1638,28 @@
   }
   .nav_title {
     font-size: 32px;
+  }
+  .footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer .links {
+    width: 100%;
+  }
+  .footer .travel {
+    width: 100%;
+  }
+  .links .section {
+    width: 80%;
+  }
+  .links .section a {
+    font-size: 14px;
+  }
+  .links .pages {
+    width: 98%;
+  }
+  .links .pages a {
+    font-size: 14px;
   }
 }
 

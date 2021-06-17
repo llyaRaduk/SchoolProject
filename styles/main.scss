@@ -1133,30 +1133,15 @@
         }
     }
     .links{
-        width: 70%;
         & .section{
-            flex-wrap: wrap;
-            width: 100%;
-            justify-content: space-around;
-            & li{
-                padding: 5px 5px;
-                a{
-                    font-size: 17px;
-                }
-            }
+           a{
+               font-size: 16px;
+           }
         }
     
         & .pages{
-            margin-top: 32px;
-            width: 100%;
-            justify-content: space-around;
-            display: flex;
-            flex-wrap: wrap;
-            & li{
-                padding: 5px 5px;
-                a{
-                    font-size: 17px;
-                }
+            a{
+                font-size: 16px;
             }
         }
     }
@@ -1241,6 +1226,22 @@
             }
         }
        
+    }
+
+    .links{
+        & .section{
+            width: 80%;
+           a{
+               font-size: 16px;
+           }
+        }
+    
+        & .pages{
+            width: 90%;
+            a{
+                font-size: 16px;
+            }
+        }
     }
 }
 
@@ -1378,6 +1379,22 @@
         }
 
     }
+
+    .links{
+        & .section{
+            width: 80%;
+           a{
+               font-size: 14px;
+           }
+        }
+    
+        & .pages{
+            width: 98%;
+            a{
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 @media (max-width: 583px){
@@ -1399,6 +1416,31 @@
         &_title{
             font-size: 32px;
             
+        }
+    }
+
+    .footer{
+        flex-wrap: wrap;
+        .links{
+            width: 100%;
+        }
+        .travel{
+            width: 100%;
+        }
+    }
+    .links{
+        & .section{
+            width: 80%;
+           a{
+               font-size: 14px;
+           }
+        }
+    
+        & .pages{
+            width: 98%;
+            a{
+                font-size: 14px;
+            }
         }
     }
 
