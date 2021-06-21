@@ -1204,7 +1204,7 @@
           justify-content: space-between;
   margin-top: 22px;
   margin-bottom: 30px;
-  width: 100%;
+  width: 90%;
 }
 
 .border_card {
@@ -1248,6 +1248,8 @@
 }
 
 .travel .label {
+  position: relative;
+  left: -10px;
   margin-top: 35px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1403,7 +1405,7 @@
     width: 30%;
   }
   .travel .label_text .label_textT {
-    font-size: 17px;
+    font-size: 15px;
     text-align: center;
   }
   .label_geo {
@@ -1468,6 +1470,11 @@
   }
   .links .pages a {
     font-size: 16px;
+  }
+  .travel .label {
+    position: relative;
+    left: -20px;
+    margin-top: 10px;
   }
 }
 
@@ -1646,8 +1653,22 @@
   .footer .links {
     width: 100%;
   }
+  .footer .links .adress {
+    margin-bottom: 10px;
+  }
   .footer .travel {
+    background-color: #1db1ee;
     width: 100%;
+  }
+  .footer .travel .label_text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 10px;
+    padding-left: 10px;
   }
   .links .section {
     width: 80%;
@@ -1669,6 +1690,33 @@
   }
   .students_menu .menuSect {
     width: 95%;
+  }
+}
+
+@media (max-width: 400px) {
+  .links .section {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .links .section li {
+    text-align: center;
+    width: 120px;
+  }
+  .links .pages {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .links .pages li {
+    text-align: center;
+    width: 120px;
   }
 }
 
@@ -1780,8 +1828,9 @@
     width: 100%;
     padding-left: 0px;
   }
-  .travel .label_text .label_textT {
-    font-size: 10px;
+  .travel .label {
+    position: relative;
+    left: 0px;
   }
   .cardNews {
     width: 90%;
@@ -1789,8 +1838,9 @@
 }
 
 @media (max-width: 355px) {
-  .label_textT {
-    display: none;
+  .travel .label_text .label_textT {
+    font-size: 14px;
+    text-align: center;
   }
   .container .slick-next {
     margin-right: 14px;
