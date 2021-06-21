@@ -112,11 +112,19 @@
   display: block;
 }
 
+.dropdown_content a:hover {
+  background-color: #92cc4a;
+}
+
 .dropdown_content_last a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+}
+
+.dropdown_content_last a:hover {
+  background-color: #92cc4a;
 }
 
 .nav_item:hover .dropdown_content {
@@ -144,6 +152,13 @@
 }
 
 .links li:hover {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+.menu_func li:hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
   -webkit-transition: 0.1s linear;
@@ -1982,6 +1997,9 @@
 }
 
 @media (max-width: 318px) {
+  .menu__box {
+    width: 100%;
+  }
   .menuSect li {
     font-size: 10px;
   }
