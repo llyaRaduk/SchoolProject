@@ -153,6 +153,36 @@
 }
 
 
+//dropdown in phone menu
+
+
+.dropdown_burger {
+    display: block;
+}
+
+
+
+.dropdown_content_burger{
+    display: none;
+    z-index: 1;
+   
+}
+
+
+.dropdown_content_burger a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    &:hover{
+        background-color: #92cc4a;
+    }
+}
+
+.open{
+    display: block;
+}
+
 // hover menu
 
 

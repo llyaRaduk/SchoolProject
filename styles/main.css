@@ -137,6 +137,30 @@
           transform: scaleY(1);
 }
 
+.dropdown_burger {
+  display: block;
+}
+
+.dropdown_content_burger {
+  display: none;
+  z-index: 1;
+}
+
+.dropdown_content_burger a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown_content_burger a:hover {
+  background-color: #92cc4a;
+}
+
+.open {
+  display: block;
+}
+
 .menuSect li:hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
