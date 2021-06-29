@@ -762,6 +762,7 @@
 }
 
 .date_clock {
+  font-size: 20px;
   margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
