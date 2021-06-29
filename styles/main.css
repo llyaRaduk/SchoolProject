@@ -68,6 +68,14 @@
   font-display: swap;
 }
 
+.activeClock {
+  color: #9ec967 !important;
+}
+
+.activeClock > span {
+  color: #9ec967 !important;
+}
+
 .dropdown {
   position: relative;
   display: block;

@@ -80,6 +80,15 @@
     font-display: swap;
 }
 
+//clock
+
+.activeClock{
+     color: #9ec967 !important;
+     &>span{
+        color: #9ec967 !important;
+     }
+}
+
 //dropdown
 
 
