@@ -89,6 +89,13 @@
      }
 }
 
+.leftTime_order > .leftTime_item{
+    opacity: 0;
+}
+.leftTime_item_active{
+    opacity: 1 !important;
+}
+
 //dropdown
 
 
